@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct Hydration_Watch_AppApp: App {
+    let viewModel = ViewModel()
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ContentView()
+                ContentView().environmentObject(viewModel)
             }
         }
     }
